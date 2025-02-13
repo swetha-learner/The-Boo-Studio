@@ -25,15 +25,21 @@ const __dirname = path.resolve()
 app.use(express.json({limit: "50mb"})) //middleware --> extracts json data of req.body
 app.use(express.urlencoded({ extended: true , limit: "50mb"}));
 app.use(cookieParser()) //allows to parse cookie
-app.use(helmet({ crossOriginEmbedderPolicy: false, originAgentCluster: true }))
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin"}))
+app.use(helmet());
+app.use(helmet.crossOriginEmbedderPolicy({ policy: "credentialless" }));
 app.use(
-  helmet.contentSecurityPolicy({
-    useDefaults: true,
-    directives: {
-      "img-src": ["'self'", "https: data: blob:"],
-    },
-  })
+    helmet({
+        crossOriginEmbedderPolicy: false,
+        originAgentCluster: true
+    })
+);
+app.use(
+    helmet.contentSecurityPolicy({
+        useDefaults: true,
+        directives: {
+            "img-src": ["'self'", "https:", "data:", "blob:"]
+        }
+    })
 );
 
 
