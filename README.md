@@ -36,7 +36,11 @@ Boo - A Product of The Boo Studio is a real-time chat application made to connec
 
 ## .env File
 
-👩‍🏫 include all these in your .env File
+👩‍🏫 
+  ✏️ Create .env file in backend folder.
+
+  ✏️ Include below Snippet in your file.
+
 
 ```bash
 MONGODB_URI = <your mongodb connection string>
@@ -55,12 +59,33 @@ CLOUDINARY_API_SECRET = <cloudinary api secret key>
 
 ```
 
+## 🕵️ Get the most challenging JWT Secret Key
+
+📋 If you've already installed OpenSSl , Skip these instructions.
+
+📋 Download OpenSSL (.exe)
+
+📋 Run as Administrator (Crucial step)
+
+📋 Follow the guidelines and at one point you'll be asked to select where to place DLL files. Choose The Windows system directory.
+
+📋 Finish installation and add the path in Environment Variables
+
+📋 Open command prompt -> run this command --> openssl version 
+
+```bash
+  openssl rand -base64 32
+```
+
+📋 Copy & Paste the key in .env file
+
+
 ## 🛠️ Build 
 
 To run build, run the following command
 
 ```bash
-  npm run build
+  npm run generate
 ```
 ## ▶️ Start  
 
