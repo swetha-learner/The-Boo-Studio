@@ -36,7 +36,6 @@ Boo - A Product of The Boo Studio is a real-time chat application made to connec
 
 ## .env File
 
-👩‍🏫 
   ✏️ Create .env file in backend folder.
 
   ✏️ Include below Snippet in your file.
@@ -61,7 +60,7 @@ CLOUDINARY_API_SECRET = <cloudinary api secret key>
 
 ## 🕵️ Get the most challenging JWT Secret Key
 
-📋 If you've already installed OpenSSl , Skip these instructions.
+📋 If you've already installed OpenSSL , Skip these instructions.
 
 📋 Download OpenSSL (.exe)
 
